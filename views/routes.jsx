@@ -9,6 +9,7 @@ import Home from "./public/home";
 import { Icon } from "@rneui/base";
 import Profile from "./private/profile";
 import Subscriptions from "./private/subscriptions";
+import ShortsScreen from "./public/shorts";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -70,6 +71,12 @@ function TabNavigator() {
               ? darkTheme.colors.textPrimary
               : darkTheme.colors.textSecondary;
           }
+          if (route.name === "Shorts") {
+            iconName = "play-circle";
+            color = focused
+              ? darkTheme.colors.textPrimary
+              : darkTheme.colors.textSecondary;
+          }
           return <Icon name={iconName} color={color} size={24} />;
         },
         headerShown: false,
@@ -82,6 +89,7 @@ function TabNavigator() {
       })}
     >
       <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Shorts" component={ShortsScreen} />
       <Tab.Screen name="Inscrições" component={Subscriptions} />
       <Tab.Screen name="Você" component={Profile} />
     </Tab.Navigator>
