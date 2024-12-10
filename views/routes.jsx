@@ -8,6 +8,7 @@ import VideoPage from "./public/videoPage";
 import Home from "./public/home";
 import { Icon } from "@rneui/base";
 import Profile from "./private/profile";
+import Subscriptions from "./private/subscriptions";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -57,6 +58,18 @@ function TabNavigator() {
               ? darkTheme.colors.textPrimary
               : darkTheme.colors.textSecondary;
           }
+          if (route.name === "Você") {
+            iconName = "person";
+            color = focused
+              ? darkTheme.colors.textPrimary
+              : darkTheme.colors.textSecondary;
+          }
+          if (route.name === "Inscrições") {
+            iconName = "subscriptions";
+            color = focused
+              ? darkTheme.colors.textPrimary
+              : darkTheme.colors.textSecondary;
+          }
           return <Icon name={iconName} color={color} size={24} />;
         },
         headerShown: false,
@@ -69,6 +82,7 @@ function TabNavigator() {
       })}
     >
       <Tab.Screen name="Home" component={Home} />
+      <Tab.Screen name="Inscrições" component={Subscriptions} />
       <Tab.Screen name="Você" component={Profile} />
     </Tab.Navigator>
   );
