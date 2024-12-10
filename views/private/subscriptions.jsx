@@ -15,35 +15,6 @@ import BadgeBtn from "../../components/BadgeBtn";
 import VideoBtn from "../../components/VideoBtn";
 import data from "./../../data/data.json";
 
-// Dados simulados para o carrossel
-const channels = [
-  {
-    id: "1",
-    name: "Vila do Chaves",
-    profileImg: "https://via.placeholder.com/50",
-  },
-  {
-    id: "2",
-    name: "Manual do Mundo",
-    profileImg: "https://via.placeholder.com/50",
-  },
-  {
-    id: "3",
-    name: "Gigaton Games",
-    profileImg: "https://via.placeholder.com/50",
-  },
-  {
-    id: "4",
-    name: "Labz",
-    profileImg: "https://via.placeholder.com/50",
-  },
-  {
-    id: "5",
-    name: "Filipe Des",
-    profileImg: "https://via.placeholder.com/50",
-  },
-];
-
 export default function Subscriptions({ navigation }) {
   const [activeBadge, setActiveBadge] = useState("all");
 
