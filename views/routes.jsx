@@ -10,6 +10,7 @@ import { Icon } from "@rneui/base";
 import Profile from "./private/profile";
 import Subscriptions from "./private/subscriptions";
 import ShortsScreen from "./public/shorts";
+import SearchPage from "./public/search";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -40,6 +41,7 @@ export default function Routes() {
         })}
       >
         <Stack.Screen name="Home" component={TabNavigator} />
+        <Stack.Screen name="Search" component={SearchPage} />
         <Stack.Screen name="VideoPage" component={VideoPage} />
       </Stack.Navigator>
     </NavigationContainer>
