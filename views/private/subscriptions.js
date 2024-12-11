@@ -13,7 +13,7 @@ import { darkTheme } from "../../styles/globals";
 import IconBtn from "../../components/IconBtn";
 import BadgeBtn from "../../components/BadgeBtn";
 import VideoBtn from "../../components/VideoBtn";
-import data from "./../../data/data.json";
+import data from "../../data/data.json";
 
 export default function Subscriptions({ navigation }) {
   const [activeBadge, setActiveBadge] = useState("all");
